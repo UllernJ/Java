@@ -33,7 +33,7 @@ public class Main {
         /* Oppgave 2.5 */
         System.out.println("\nNeptune gravity: " + neptune.getSurfaceGravity());
 
-
+        /* Oppgave 2.6 */
         System.out.println("Største planet:" + planetSystem.getStorstePlanet());
         System.out.println("Minste planet: " + planetSystem.getMinstePlanet());
     }
