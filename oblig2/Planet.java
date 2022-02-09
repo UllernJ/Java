@@ -34,7 +34,7 @@ public class Planet {
     }
 
     public String toString() {
-        return("Navn: " + navn + "\nRadius: " + radius +"\nMasse: " + masse);
+        return("\nNavn: " + navn + ", Radius: " + radius +", Masse: " + masse);
     }
     public double getMasseKg() {
         return(masse*1.898E27);
