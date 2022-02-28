@@ -15,9 +15,18 @@ public class Star extends CelestialBody {
     public void setEffectiveTemp(double effectiveTemp) {
         this.effectiveTemp = effectiveTemp;
     }
+
     @Override
     public String toString() {
         return("\nNavn:" + getNavn() + "\nRadius:" + getRadius() + "\nMasse:" + getMasse());
     }
 
+
+    public double getRadiusKm() {
+        return(getRadius()*695700);
+    }
+
+    public double getMassKg() {
+        return(getMasse()*1.98892E30);
+    }
 }

@@ -79,6 +79,7 @@ public class PlanetSystem {
         }
         return minstePlanet;
     }
+
     /* 2.2 */
     public Planet getSpesficPlanet(String x) {
         Planet spesPlanet = null;
