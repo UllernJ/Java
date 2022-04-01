@@ -4,7 +4,6 @@ public class TextManipulation {
 
     public String actions(String action, String word ) {
         if(action.contains("PALINDROME")) {
-            //We use a library to reverse the string easier.
             StringBuilder rev = new StringBuilder(word);
             rev.reverse();
             if(word.equals(rev.toString())) {
