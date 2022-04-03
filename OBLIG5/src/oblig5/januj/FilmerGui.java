@@ -1,5 +1,5 @@
 package oblig5.januj;
-import oblig5.januj.models.Film;
+import oblig5.januj.models.FilmSerie;
 import oblig5.januj.tools.FilmerCSVFileHandler;
 
 import javax.swing.*;
@@ -18,10 +18,11 @@ public class FilmerGui extends JFrame {
     private JTextField sjangerTextField;
     private JLabel sjangerLabel;
     private JButton lagreKnapp;
+    private JButton print;
     private JTabbedPane tab;
     private JLabel tabLabel;
     private JLabel mainLabel;
-    List<Film> filmer = new ArrayList<>();
+    List<FilmSerie> filmer = new ArrayList<>();
 
     public FilmerGui(String title) {
         super(title);
@@ -36,10 +37,16 @@ public class FilmerGui extends JFrame {
                 String navn = navnTextField.getText();
                 double rating = Double.parseDouble(ratingTextField.getText());
                 String sjanger = sjangerTextField.getText();
-                Film film = new Film(navn, rating, sjanger);
+                FilmSerie film = new FilmSerie(navn, rating, sjanger);
                 filmer.add(film);
                 k.writeObjectsToFile(filmer);
                 filmer.remove(0);
+            }
+        });
+        print.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                System.out.println(k.readObjectsFromFile());
             }
         });
     }
