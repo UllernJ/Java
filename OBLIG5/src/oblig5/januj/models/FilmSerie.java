@@ -4,11 +4,13 @@ public class FilmSerie {
     private String navn;
     private double rating;
     private String sjanger;
+    private String utgivelsesdato;
 
-    public FilmSerie(String navn, double rating, String sjanger) {
+    public FilmSerie(String navn, double rating, String sjanger, String utgivelsesdato) {
         this.navn = navn;
         this.rating = rating;
         this.sjanger = sjanger;
+        this.utgivelsesdato = utgivelsesdato;
     }
 
 
@@ -36,13 +38,22 @@ public class FilmSerie {
         this.sjanger = sjanger;
     }
 
+    public String getUtgivelsesdato() {
+        return utgivelsesdato;
+    }
+
+    public void setUtgivelsesdato(String utgivelsesdato) {
+        this.utgivelsesdato = utgivelsesdato;
+    }
+
     @Override
     public String toString() {
         return "navn='" + navn + '\'' +
                 ", rating=" + rating +
-                ", sjanger='" + sjanger + "\n";
+                ", sjanger='" + sjanger +
+                ", utgivelsesdato=" + utgivelsesdato + "\n";
     }
     public String serializer() {
-        return this.getNavn() + "," + this.getRating() + "," + this.getSjanger();
+        return this.getNavn() + "," + this.getRating() + "," + this.getSjanger() + "," + this.getUtgivelsesdato();
     }
 }
