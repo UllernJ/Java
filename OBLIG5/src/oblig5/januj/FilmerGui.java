@@ -26,6 +26,7 @@ public class FilmerGui extends JFrame {
     private JLabel datoLabel;
     private JTextField episoder;
     private JLabel episoderLabel;
+    private JLabel info;
     private JTabbedPane tab;
     private JLabel tabLabel;
     private JLabel mainLabel;
